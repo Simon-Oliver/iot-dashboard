@@ -1,33 +1,14 @@
 import React from 'react';
+import Container from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Container';
+import styles from './NavBar.module.css';
 import Link from 'next/link';
 
 export default function NavBar() {
   return (
-    <Container>
-      <Nav fill variant="pill" defaultActiveKey="/">
-        <Nav.Item>
-          <Link href="/" passHref>
-            <Nav.Link active>Active</Nav.Link>
-          </Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Link href="/dashboard" passHref>
-            <Nav.Link eventKey="link-1">Dashboard</Nav.Link>
-          </Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Link href="/" passHref>
-            <Nav.Link eventKey="link-2">Link</Nav.Link>
-          </Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
-    </Container>
+    <div>
+      <Col md={2} className={`${styles.sidebar} d-none`}></Col>
+    </div>
   );
 }
